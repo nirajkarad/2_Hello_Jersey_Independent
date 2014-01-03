@@ -4,41 +4,23 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>ning.codelab</groupId>
   <artifactId>hello-core-jersey</artifactId>
-  <packaging>war</packaging>
   <version>0.1.0-SNAPSHOT</version>
   <name>hello-core-jersey</name>
 
   <dependencies>
     
-	<dependency>
-		<groupId>com.google.guava</groupId>
-		<artifactId>guava</artifactId>
-		<version>15.0</version> 
-	</dependency>
-            
      <dependency>
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-core-asl</artifactId>
       <version>1.9.13</version>  
     </dependency> 
 
-    <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-jaxrs</artifactId>
-      <version>1.9.13</version> 
-    </dependency>
 
     <dependency>
 		<groupId>org.skife.config</groupId>
 		<artifactId>config-magic</artifactId>
 		<version>0.17</version> 
 	</dependency>
-
-    <dependency>
-      <groupId>cglib</groupId>
-      <artifactId>cglib-nodep</artifactId>
-      <version>3.0</version> 
-    </dependency>
 
     <dependency>
       <groupId>com.sun.jersey</groupId>
@@ -65,12 +47,6 @@
 	</dependency>
 	
     <dependency>
-      <groupId>joda-time</groupId>
-      <artifactId>joda-time</artifactId>
-      <version>2.3</version>  
-    </dependency>
-
-    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
       <version>2.5</version> 
@@ -79,22 +55,11 @@
 
     <dependency>
       <groupId>org.slf4j</groupId>
-      <artifactId>jul-to-slf4j</artifactId>
-      <version>1.5.11</version> 
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.5.11</version> 
     </dependency>
 
-    <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version> 
-    </dependency>
-
-    <dependency>
+     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>6.8.7</version>  
@@ -108,16 +73,12 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
-	<groupId>junit</groupId>
-	<artifactId>junit</artifactId>
-	<version>4.11</version> 
-	</dependency>
+
   </dependencies>
 
   <build>
     <plugins>
-      <!-- Added this plugin as Annotations are supported by only 1.5 & Higher-->
+
       	<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>

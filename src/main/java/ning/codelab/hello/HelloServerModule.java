@@ -1,9 +1,6 @@
 package ning.codelab.hello;
 
-import static com.google.common.collect.ImmutableMap.of;
-
 import com.google.inject.servlet.ServletModule;
-import com.sun.jersey.api.container.filter.GZIPContentEncodingFilter;
 import com.sun.jersey.guice.spi.container.servlet.GuiceContainer;
 
 /**
@@ -19,11 +16,7 @@ public class HelloServerModule extends ServletModule
     	
     	bind(MyConfig.class).toProvider(ConfigProvider.class);
 
-        serve("*").with(GuiceContainer.class, 
-        		of("com.sun.jersey.spi.container.ContainerRequestFilters", 
-        				GZIPContentEncodingFilter.class.getName(), 
-        				"com.sun.jersey.spi.container.ContainerResponseFilters", 
-        				GZIPContentEncodingFilter.class.getName()));
+        serve("*").with(GuiceContainer.class);
 
         bind(HelloResource.class).asEagerSingleton();
     }
